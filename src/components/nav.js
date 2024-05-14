@@ -181,30 +181,17 @@ const Nav = ({ isHome }) => {
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
 
-  const Logo = (
-    <div className="logo" tabIndex="-1">
-      {isHome ? (
-        <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </a>
-      ) : (
-        <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </Link>
-      )}
+  const LogoPlaceholder = (
+    <div className="logo" aria-hidden="true" style={{ visibility: 'hidden', width: '42px', height: '42px' }}>
+      <div className="hex-container">
+        <IconHex />
+      </div>
+      <div className="logo-container">
+        <IconLogo />
+      </div>
     </div>
   );
-
+  
   const ResumeLink = (
     <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
       Resume
@@ -216,7 +203,7 @@ const Nav = ({ isHome }) => {
       <StyledNav>
         {prefersReducedMotion ? (
           <>
-            {Logo}
+            {LogoPlaceholder}
 
             <StyledLinks>
               <ol>
@@ -237,7 +224,7 @@ const Nav = ({ isHome }) => {
             <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <>{Logo}</>
+                  <>{LogoPlaceholder}</>
                 </CSSTransition>
               )}
             </TransitionGroup>

@@ -319,10 +319,7 @@ const Featured = () => {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
               }
-              tech
-              github
               external
-              cta
             }
             html
           }
@@ -348,21 +345,21 @@ const Featured = () => {
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+        Some Pictures I Love
       </h2>
 
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
+            const { external, title, cover} = frontmatter;
             const image = getImage(cover);
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    <p className="project-overline">Featured Pictures</p>
 
                     <h3 className="project-title">
                       <a href={external}>{title}</a>
@@ -373,26 +370,9 @@ const Featured = () => {
                       dangerouslySetInnerHTML={{ __html: html }}
                     />
 
-                    {tech.length && (
-                      <ul className="project-tech-list">
-                        {tech.map((tech, i) => (
-                          <li key={i}>{tech}</li>
-                        ))}
-                      </ul>
-                    )}
 
-                    <div className="project-links">
-                      {cta && (
-                        <a href={cta} aria-label="Course Link" className="cta">
-                          Learn More
-                        </a>
-                      )}
-                      {github && (
-                        <a href={github} aria-label="GitHub Link">
-                          <Icon name="GitHub" />
-                        </a>
-                      )}
-                      {external && !cta && (
+                   <div className="project-links">
+                      {external && (
                         <a href={external} aria-label="External Link" className="external">
                           <Icon name="External" />
                         </a>
@@ -402,7 +382,7 @@ const Featured = () => {
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a href="#" onClick={(e) => e.preventDefault()} role="presentation">
                     <GatsbyImage image={image} alt={title} className="img" />
                   </a>
                 </div>

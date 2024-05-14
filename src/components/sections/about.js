@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['Python', 'PyTorch', 'TensorFlow', 'NumPy', 'LangChain', 'PyDICOM'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,30 +135,39 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Luke. I am currently an undergraduate student at the University of Texas at Austin,
+              studying biomedical engineering with a concentration on computation. My career passion lies in working on the 
+              intersection of healthcare, artificial intelligence, and policy along with venture capital. Currently, my focus is on building products that leverage artificial intelligence to improve
+              the field of medicine. 
+              
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              Throughout my young career, I have been blessed to do technical work at many places such as {' '}
+              <a href="https://www.pfizer.com/">Pfizer</a>,{' '}
+              <a href="https://www.mit.edu/">Massachusetts Institute Technology</a>,{' '}
+              <a href="https://hms.harvard.edu/">Harvard Medical School</a>,{' '}
+              <a href="https://www.merck.com/">Merck</a>, and{' '}
+              <a href="https://www.utexas.edu/">UT Austin</a>. 
+              
+            </p>
+            <p>
+              
+              I have also dabbled the field of venture capital and artificial intelligence entrepreneurship at {' '}
+              <a href="https://www.plugandplaytechcenter.com/">Plug and Play</a>,{' '}
+              <a href="https://1m1m.sramanamitra.com/">One Million by One Million</a>. Moreover, I was able to work with {' '}
+              <a href="https://www.nyu.edu/">New York University</a> on studies about discrimination in healthcare. 
+              
+            
             </p>
 
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
+              Recently, I founded{' '}
+              <a href="https://ainhealth.wixsite.com/home">
+                a political movement
               </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              that advocates for the incentivization of artificial intelligence implementation into healthcare settings with a couple friends. 
+              
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
@@ -173,7 +182,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/headshot.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
