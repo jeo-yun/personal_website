@@ -182,7 +182,10 @@ const Nav = ({ isHome }) => {
   const fadeDownClass = isHome ? 'fadedown' : '';
 
   const LogoPlaceholder = (
-    <div className="logo" aria-hidden="true" style={{ visibility: 'hidden', width: '42px', height: '42px' }}>
+    <div
+      className="logo"
+      aria-hidden="true"
+      style={{ visibility: 'hidden', width: '42px', height: '42px' }}>
       <div className="hex-container">
         <IconHex />
       </div>
@@ -191,9 +194,9 @@ const Nav = ({ isHome }) => {
       </div>
     </div>
   );
-  
+
   const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <a className="resume-button" href="/strip_resume.pdf" target="_blank" rel="noopener noreferrer">
       Resume
     </a>
   );
