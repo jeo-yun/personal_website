@@ -5,7 +5,7 @@ module.exports = {
     title: 'Luke Yun',
     description:
       'Luke Yun is an undergraduate student who has a passion for artificial intelligence, healthcare, and policy',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
+    siteUrl: 'https://lukeyun.site', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
